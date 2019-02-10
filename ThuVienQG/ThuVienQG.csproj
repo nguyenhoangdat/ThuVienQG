@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5BF7B43-27C8-4586-A72B-EFC7AB6E2FAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ThuVienQG</RootNamespace>
+    <AssemblyName>ThuVienQG</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\DauSachBUS.cs" />
+    <Compile Include="BUS\DocGiaBUS.cs" />
+    <Compile Include="BUS\LoaiDGBUS.cs" />
+    <Compile Include="BUS\NXBBUS.cs" />
+    <Compile Include="BUS\SachBUS.cs" />
+    <Compile Include="BUS\TheLoaiBUS.cs" />
+    <Compile Include="BUS\TTPhieuMuonBUS.cs" />
+    <Compile Include="BUS\TTPhieuNhapBUS.cs" />
+    <Compile Include="DAO\DauSachDAO.cs" />
+    <Compile Include="DAO\DocGiaDAO.cs" />
+    <Compile Include="DAO\NXBDAO.cs" />
+    <Compile Include="DAO\SachDAO.cs" />
+    <Compile Include="DAO\LoaiDGDAO.cs" />
+    <Compile Include="DAO\MySQL.cs" />
+    <Compile Include="DAO\TheLoaiDAO.cs" />
+    <Compile Include="DAO\TTPhieuMuonDAO.cs" />
+    <Compile Include="DAO\TTPhieuNhapDAO.cs" />
+    <Compile Include="DTO\DauSachDTO.cs" />
+    <Compile Include="DTO\DocGiaDTO.cs" />
+    <Compile Include="DTO\LoaiDGDTO.cs" />
+    <Compile Include="DTO\NXBDTO.cs" />
+    <Compile Include="DTO\PhieuMuonDTO.cs" />
+    <Compile Include="DTO\PhieuDTO.cs" />
+    <Compile Include="DTO\SachDTO.cs" />
+    <Compile Include="DTO\TheLoaiDTO.cs" />
+    <Compile Include="DTO\TTPhieuMuonDTO.cs" />
+    <Compile Include="DTO\TTPhieuNhapDTO.cs" />
+    <Compile Include="GUI\FAddBookCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddBookCategory.Designer.cs">
+      <DependentUpon>FAddBookCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddDeliveryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddDeliveryNote.Designer.cs">
+      <DependentUpon>FAddDeliveryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddLendNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddLendNote.Designer.cs">
+      <DependentUpon>FAddLendNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddPayBackNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddPayBackNote.Designer.cs">
+      <DependentUpon>FAddPayBackNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddReader.Designer.cs">
+      <DependentUpon>FAddReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddReceiptNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddReceiptNote.Designer.cs">
+      <DependentUpon>FAddReceiptNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddTitle.Designer.cs">
+      <DependentUpon>FAddTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FAddSupplier.Designer.cs">
+      <DependentUpon>FAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FEditReceiptNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FEditReceiptNote.Designer.cs">
+      <DependentUpon>FEditReceiptNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FThuVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FThuVien.Designer.cs">
+      <DependentUpon>FThuVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PDeliveryNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLendNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PPayBackNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PReceiptNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FAddBookCategory.resx">
+      <DependentUpon>FAddBookCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddDeliveryNote.resx">
+      <DependentUpon>FAddDeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddLendNote.resx">
+      <DependentUpon>FAddLendNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddPayBackNote.resx">
+      <DependentUpon>FAddPayBackNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddReader.resx">
+      <DependentUpon>FAddReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddReceiptNote.resx">
+      <DependentUpon>FAddReceiptNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddSupplier.resx">
+      <DependentUpon>FAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FAddTitle.resx">
+      <DependentUpon>FAddTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FEditReceiptNote.resx">
+      <DependentUpon>FEditReceiptNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FThuVien.resx">
+      <DependentUpon>FThuVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
